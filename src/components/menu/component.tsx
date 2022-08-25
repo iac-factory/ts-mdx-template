@@ -11,6 +11,7 @@ import {Item} from ".";
 import {List} from ".";
 
 import "./index.scss";
+
 import React from "react";
 
 /***
@@ -19,11 +20,8 @@ import React from "react";
 export const Menu = () => {
     const authorization = Authorization.useAuthorization();
 
-    return (!(authorization) || authorization?.user === null) ? (
-        <Navigator>
-            <Global prefix={process.env["REACT_APP_NAME"]} title={process.env["REACT_APP_SUFFIX"]} reload={false}/>
-        </Navigator>
-    ) : (
+    // return (!(authorization) || authorization?.user === null) ? (
+    return (
         <Navigator>
             <Global prefix={process.env["REACT_APP_NAME"]} title={process.env["REACT_APP_SUFFIX"]} reload={false}/>
             <Panel title={"References"}>

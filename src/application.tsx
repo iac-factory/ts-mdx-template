@@ -13,19 +13,30 @@ export const Application = () => {
     const Login = React.lazy(() => import("./pages/login"));
 
     return (
-        <Provider>
-            <Routes>
-                <Route element={(<Shell/>)}>
-                    <Route element={(<Consumer/>)}>
-                        <Route path={"*"} element={(<Markdown content={Content}/>)}/>
-                    </Route>
-                </Route>
-                <Route element={(<Shell/>)}>
-                    <Route element={(<Login/>)} path={"/login"}/>
-                </Route>
-            </Routes>
-        </Provider>
+        <Routes>
+            <Route element={(<Shell/>)}>
+                <Route path={"*"} element={(<Markdown content={Content}/>)}/>
+            </Route>
+            <Route element={(<Shell/>)}>
+                <Route element={(<Login/>)} path={"/login"}/>
+            </Route>
+        </Routes>
     );
+
+    /// return (
+    ///     <Provider>
+    ///         <Routes>
+    ///             <Route element={(<Shell/>)}>
+    ///                 <Route element={(<Consumer/>)}>
+    ///                     <Route path={"*"} element={(<Markdown content={Content}/>)}/>
+    ///                 </Route>
+    ///             </Route>
+    ///             <Route element={(<Shell/>)}>
+    ///                 <Route element={(<Login/>)} path={"/login"}/>
+    ///             </Route>
+    ///         </Routes>
+    ///     </Provider>
+    /// );
 };
 
 export default Application;
