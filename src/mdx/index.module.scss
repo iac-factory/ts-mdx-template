@@ -1,0 +1,121 @@
+@mixin inline-code() {
+    font-size: 87.5%;
+    padding: 0.2em 0.4em;
+    background-color: rgba(110, 118, 129, 0.4);
+    border-radius: 6px;
+    margin-right: 0.1rem;
+}
+
+.content {
+    h1 {
+        display: block;
+        font-size: 3.0rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.0rem;
+
+        line-height: 1.385;
+
+        font-weight: 1000;
+
+        code {
+            @include inline-code();
+
+            font-weight: bold;
+        }
+    }
+
+    h2:first-of-type {
+        margin-top: 0.25rem;
+    }
+
+    h2 {
+        display: block;
+        font-size: 2.15rem;
+        margin-top: 1.0rem;
+        margin-bottom: 1.0rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+
+        font-weight: 600;
+    }
+
+    /*** The `References` `<hr>` Splitter */
+
+    hr:last-of-type {
+        margin-top: 1.5rem;
+    }
+
+    ul {
+        margin-top: 0.0rem;
+        margin-bottom: 0.0rem;
+
+        li {
+            list-style-type: circle;
+            list-style-position: inside;
+        }
+    }
+
+    p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-right: 1.75rem;
+        margin-left: 1.75rem;
+
+        code {
+            @include inline-code();
+        }
+    }
+
+    pre {
+        border-radius: 2.5px;
+        background-color: black;
+        padding: 0.5rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+
+        line-height: 1.435rem;
+
+        overflow: auto;
+    }
+
+    a {
+        code {
+            @include inline-code();
+
+            background-color: black;
+        }
+    }
+
+    /***
+     * Common Break-Points
+     *  - 320px—480px: Mobile devices
+     *  - 481px—768px: iPads, Tablets
+     *  - 769px—1024px: Small screens, laptops
+     *  - 1025px—1200px: Desktops, large screens
+     *  - 1201px and more— Extra large screens, TV
+     */
+
+    @media only screen and (max-width: 768px) {
+        h2 {
+            margin-left: 0.0rem;
+            margin-right: 0.0rem;
+        }
+
+        p {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+        h2 {
+            margin-left: 0.0rem;
+            margin-right: 0.0rem;
+        }
+
+        p {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+        }
+    }
+}
