@@ -11,11 +11,12 @@ export const Application = () => {
     const {Consumer} = Authorization;
 
     const Login = React.lazy(() => import("./pages/login"));
+    const Documentation = React.lazy(() => import("./pages/documentation"));
 
     return (
         <Routes>
             <Route element={(<Shell/>)}>
-                <Route path={"*"} element={(<Markdown content={Content}/>)}/>
+                <Route path={"/documentation"} element={<Documentation/>}/>
             </Route>
             <Route element={(<Shell/>)}>
                 <Route element={(<Login/>)} path={"/login"}/>
