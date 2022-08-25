@@ -24,3 +24,5 @@ export function useExternalClickDetection(reference: React.RefObject<any>, trigg
         };
     }, [reference, trigger, state]);
 }
+
+export default useExternalClickDetection;
