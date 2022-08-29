@@ -1,0 +1,6 @@
+---
+SCSS:
+    module: True
+    scss:
+        - "functions.scss.yaml"
+        - "module.scss.yaml"

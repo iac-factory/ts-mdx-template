@@ -1,10 +1,4 @@
-@mixin inline-code() {
-    font-size: 87.5%;
-    padding: 0.2em 0.4em;
-    background-color: rgba(110, 118, 129, 0.4);
-    border-radius: 6px;
-    margin-right: 0.1rem;
-}
+@use "scss";
 
 .content {
     h1 {
@@ -18,7 +12,7 @@
         font-weight: 1000;
 
         code {
-            @include inline-code();
+            @include scss.inline-code();
 
             font-weight: bold;
         }
@@ -62,7 +56,7 @@
         margin-left: 1.75rem;
 
         code {
-            @include inline-code();
+            @include scss.inline-code();
         }
     }
 
@@ -80,42 +74,17 @@
 
     a {
         code {
-            @include inline-code();
+            @include scss.inline-code();
 
             background-color: black;
         }
     }
 
-    /***
-     * Common Break-Points
-     *  - 320px—480px: Mobile devices
-     *  - 481px—768px: iPads, Tablets
-     *  - 769px—1024px: Small screens, laptops
-     *  - 1025px—1200px: Desktops, large screens
-     *  - 1201px and more— Extra large screens, TV
-     */
-
     @media only screen and (max-width: 768px) {
-        h2 {
-            margin-left: 0.0rem;
-            margin-right: 0.0rem;
-        }
-
-        p {
-            margin-left: 0.25rem;
-            margin-right: 0.25rem;
-        }
+        @include scss.media-selector();
     }
 
     @media only screen and (max-width: 1024px) and (min-width: 768px) {
-        h2 {
-            margin-left: 0.0rem;
-            margin-right: 0.0rem;
-        }
-
-        p {
-            margin-left: 0.25rem;
-            margin-right: 0.25rem;
-        }
+        @include scss.media-selector();
     }
 }

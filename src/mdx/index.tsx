@@ -1,11 +1,18 @@
 import React, {Suspense} from "react";
 
+import CX from "classnames";
+
+const CXS = CX.bind(styles);
+
 import Language from "./languages";
 
 import styles from "./index.module.scss";
 
 import "highlight.js/scss/github-dark.scss";
-import {MDXProps} from "mdx/types";
+
+import type {MDXProps} from "mdx/types";
+
+// import E from "./example";
 
 /***
  * The MDX (Markdown) Content + Runtime Injections
@@ -14,7 +21,9 @@ import {MDXProps} from "mdx/types";
  * @returns {JSX.Element}
  * @constructor
  */
-export const MDX = ({$}: { $: typeof import("*.mdx").default }) => {
+const MDX = ({$}: { $: typeof import("*.mdx").default }) => {
+    const styling = CXS({}, styles.content);
+    
     const load = async () => {
         const classes = Object.keys(Language).map((mapping) => document.getElementsByClassName(["language", mapping].join("-")));
 
@@ -51,7 +60,7 @@ export const MDX = ({$}: { $: typeof import("*.mdx").default }) => {
     }, []);
 
     return (
-        <section className={styles.content}>
+        <section className={styling}>
             <$/>
         </section>
     );

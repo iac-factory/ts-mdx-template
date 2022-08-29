@@ -6,6 +6,8 @@ import Shell, {Authorization} from "./components";
 
 import Content from "./content.mdx";
 
+import Example from "./example";
+
 export const Application = () => {
     const {Provider} = Authorization;
     const {Consumer} = Authorization;
@@ -16,6 +18,7 @@ export const Application = () => {
     return (
         <Routes>
             <Route element={(<Shell/>)}>
+                <Route element={<Markdown content={Example}/>} index/>
                 <Route path={"/documentation"} element={<Documentation/>}/>
             </Route>
             <Route element={(<Shell/>)}>
