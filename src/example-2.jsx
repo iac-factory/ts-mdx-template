@@ -2,8 +2,8 @@
 export const name = "Test", title = "Hi, World!", filename = "example-2";
 export const Link = () => {
   return <a href={[".", filename].join("/")} target={"_self"} title={title}>
-    {name}
-  </a>;
+            {name}
+        </a>;
 };
 function _createMdxContent(props) {
   const _components = Object.assign({

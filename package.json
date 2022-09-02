@@ -17,11 +17,11 @@
         "web-vitals": "^3.0.0"
     },
     "scripts": {
-        "prestart": "tsc --moduleResolution nodenext --target esnext --module commonjs --skipLibCheck spline.ts && node spline.js",
+        "prestart": "npm run spline",
         "start": "node scripts/start.js",
         "build": "node scripts/build.js",
         "test": "node scripts/test.js",
-        "spline": "tsc spline.ts && ts-node spline"
+        "spline": "tsc --moduleResolution nodenext --target esnext --module commonjs --skipLibCheck spline.ts && node spline.js"
     },
     "eslintConfig": {
         "parser": "@typescript-eslint/parser",
@@ -99,10 +99,12 @@
         "postcss-normalize": "^10.0.1",
         "postcss-preset-env": "^7.0.1",
         "prompts": "^2.4.2",
+        "remark": "^14.0.2",
         "remark-frontmatter": "^4.0.1",
         "remark-gfm": "^3.0.1",
         "remark-mdx-code-meta": "^2.0.0",
         "remark-mdx-frontmatter": "^2.0.3",
+        "remark-toc": "^8.0.1",
         "resolve": "^1.20.0",
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.54.5",
