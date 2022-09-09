@@ -1,7 +1,4 @@
-.env
-.env.backup
-.env.backup.*
-
+.idea
 .vscode
 .eclipse
 
@@ -41,38 +38,35 @@ cdktf.out/*
 cdktf.out/**
 
 *.js
+
 **/*.js
 **/*.map
 **/*.d.ts
 
-.DS_Store
-
 *.tgz
 *.zip
 
-coverage
+*.log
+*.crt
+*.pem
 
+.DS_Store
+
+reporting
+coverage
 build
 
 *.tsbuildinfo
 tsconfig.tsbuildinfo
 **/tsconfig.tsbuildinfo
 
-*.log
-
-openapitools.json
-
-certificate.crt
-private.pem
-public.pem
-
-front-end
-
-data-dump
-
-us-east-2-bundle.pem
-
 router.cache.json
+
+.env
+.env.backup
+.env.backup.*
+
+.env.*.local
 
 !globals.d.ts
 !react-app-env.d.ts
@@ -85,5 +79,3 @@ router.cache.json
 
 !public/*.js
 !public/**/*.js
-
-.documentation
