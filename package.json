@@ -21,7 +21,7 @@
         "start": "node scripts/start.js",
         "build": "node scripts/build.js",
         "test": "node scripts/test.js",
-        "spline": "tsc --moduleResolution nodenext --target esnext --module commonjs --skipLibCheck spline.ts && node spline.js"
+        "spline": "ts-node spline"
     },
     "eslintConfig": {
         "parser": "@typescript-eslint/parser",

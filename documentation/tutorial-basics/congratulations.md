@@ -1,6 +1,6 @@
 ---
 title: Congratulations
-sidebar: 6
+sidebar: 5
 ---
 
 # Congratulations!

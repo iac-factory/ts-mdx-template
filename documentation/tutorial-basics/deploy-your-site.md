@@ -1,6 +1,6 @@
 ---
 title: Deploy Your Site
-sidebar: 5
+sidebar: 6
 ---
 
 # Deploy your site
