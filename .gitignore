@@ -85,3 +85,5 @@ router.cache.json
 
 !public/*.js
 !public/**/*.js
+
+.documentation

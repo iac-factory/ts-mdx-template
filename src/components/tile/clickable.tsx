@@ -4,13 +4,13 @@ export interface Properties {
     content: string;
 }
 
-export const Clickable = ( properties: Properties ) => {
+export const Clickable = (properties: Properties) => {
     return (
-            <a className={ styles.tile }>
-                {
-                    properties.content
-                }
-            </a>
+        <a className={styles.tile}>
+            {
+                properties.content
+            }
+        </a>
     );
 };
 

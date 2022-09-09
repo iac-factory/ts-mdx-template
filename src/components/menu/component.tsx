@@ -54,7 +54,7 @@ export const Menu = () => {
                     </Divider>
                 </Content>
             </Panel>
-            <Item title={"MDX"} reload={false} overwrite={"/"}/>
+            <Item title={"Docs"} reload={false} overwrite={"/documentation"}/>
         </Navigator>
     );
 };
