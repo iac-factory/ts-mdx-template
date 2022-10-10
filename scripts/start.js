@@ -145,35 +145,6 @@ checkBrowsers(paths.appPath, isInteractive)
                 process.exit();
             });
         }
-
-        // =================================== DOCUMENTATION MODULE ===================================
-        // Compile docs-config.json
-        console.log(process.cwd())
-        const path = "src/pages/documentation/mdx";
-        const configFileName = "docs-config.json"
-        const configFilePath = `src/pages/documentation/${configFileName}`;
-        const docConfig = {
-            docs: []
-        };
-
-        for (const doc of fs.readdirSync(path)){
-            //Print file name
-            try{
-                if(doc.split(".")[1] === "mdx") {
-                    docConfig.docs.push(doc)
-                    console.log("Document File:", doc)
-                } else {
-                    throw new Error("[DOCS] Documentation files must be .mdx files.");
-                }
-            } catch(e) {
-                throw new Error(e);
-            }
-        }
-
-        fs.writeFile(configFilePath, JSON.stringify(docConfig), (err) => {
-            if(err) throw new Error("WriteErr:", err);
-            console.log(`[DOCS] Successfully dynamically generated documentation configuration at ${configFilePath}.`);
-        })
     })
     .catch(err => {
         if (err && err.message) {

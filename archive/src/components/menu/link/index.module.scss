@@ -1,0 +1,18 @@
+.center {
+    width: fit-content;
+}
+
+.component {
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    vertical-align: middle;
+    height: 100%;
+    cursor: pointer;
+}
+
+.component:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,54 @@
+/*** Default + Base Tile(s) */
+
+.tile {
+    background-color: var(--global-layer-01);
+
+    display: block;
+    min-height: 4rem;
+    min-width: 8rem;
+    outline: 2px solid #0000;
+    outline-offset: -2px;
+    padding: 1rem;
+    position: relative;
+
+    transition: background-color 100ms cubic-bezier(.2, 0, .38, .9), outline 100ms cubic-bezier(.2, 0, .38, .9);
+
+    user-select: none;
+
+    /*** @todo Create Globals */
+    font-size: var(--global-body-compact-01-font-size, 0.875rem);
+    font-weight: var(--global-body-compact-01-font-weight, 400);
+    letter-spacing: var(--global-body-compact-01-letter-spacing, 0.16px);
+    line-height: var(--global-body-compact-01-line-height, 1.28572);
+
+    //margin: 0.5rem;
+
+    &:first-of-type {
+        margin-right: 0.5rem;
+    }
+
+    &:focus {
+        outline: 2px solid var(--global-focus, #0f62fe);
+        outline-offset: -2px;
+    }
+
+    &:not(:first-of-type) {
+        margin-left: 0.5rem;
+    }
+}
+
+/*** Clickable Tile(s) */
+a.tile:hover {
+    background-color: var(--global-field-hover-01);
+}
+
+a.tile:active:hover {
+    outline: 2px solid var(--global-focus, #0f62fe);
+    outline-offset: -2px;
+
+    user-select: none;
+}
+
+.tiles {
+    display: flex;
+}

@@ -1,0 +1,1 @@
+importScripts("./highlight/highlight.min.js");

@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Create a Page",
+        "sidebar": "1",
+        "route": "documentation/tutorial-basics",
+        "import": "./.documentation/tutorial-basics/create-a-page"
+    },
+    {
+        "title": "Create a Document",
+        "sidebar": "2",
+        "route": "documentation/tutorial-basics/create-a-document",
+        "import": "./.documentation/tutorial-basics/create-a-document"
+    },
+    {
+        "title": "Greetings!",
+        "sidebar": "3",
+        "route": "documentation/tutorial-basics/create-a-blog-post",
+        "import": "./.documentation/tutorial-basics/create-a-blog-post"
+    },
+    {
+        "title": "My document title",
+        "sidebar": "4",
+        "route": "documentation/tutorial-basics/markdown-features",
+        "import": "./.documentation/tutorial-basics/markdown-features"
+    },
+    {
+        "title": "Congratulations",
+        "sidebar": "5",
+        "route": "documentation/tutorial-basics/congratulations",
+        "import": "./.documentation/tutorial-basics/congratulations"
+    },
+    {
+        "title": "Deploy Your Site",
+        "sidebar": "6",
+        "route": "documentation/tutorial-basics/deploy-your-site",
+        "import": "./.documentation/tutorial-basics/deploy-your-site"
+    }
+]
