@@ -12,18 +12,9 @@ import { createBrowserRouter as Router } from "react-router-dom";
 export * as introduction from "./introduction";
 import {default as introduction} from "./introduction";
 
-import { Markdown } from "../mdx";
-
-export const Element = (child) => {
-    return (
-        <Markdown content={child}/>
-    );
-}
-
 export default Router([
     {
         path: "introduction",
-        element: Element(introduction)
-
+        element: introduction()
     },
 ]);

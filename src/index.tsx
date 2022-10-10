@@ -8,17 +8,20 @@ import { createRoot } from "react-dom/client";
 
 import { Vitals } from "./vitals";
 
-import MDX from "./blog";
+import Blog from "./blog";
+import Tutorial from "./blog/tutorial-basics";
 
 const Client = (identifier: string = "Application", Application: () => JSX.Element & React.LazyExoticComponent<() => JSX.Element>) => {
     const element = document.getElementById(identifier);
 
     if ( !( element ) ) throw new Error("Unable to Hydrate Web-Application");
 
+    const router = { ... Blog, ... Tutorial };
+
     return createRoot(element).render(
         (
             <React.StrictMode>
-                <Provider router={ MDX }/>
+                <Provider router={ router }/>
             </React.StrictMode>
         )
     );
