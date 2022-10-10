@@ -1,8 +1,0 @@
-[
-    {
-        "title": "Tutorial",
-        "sidebar": "1",
-        "route": "documentation",
-        "import": "./.documentation/introduction"
-    }
-]
