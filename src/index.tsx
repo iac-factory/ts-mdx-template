@@ -16,12 +16,11 @@ const Client = (identifier: string = "Application", Application: () => JSX.Eleme
 
     if ( !( element ) ) throw new Error("Unable to Hydrate Web-Application");
 
-    const router = { ... Blog, ... Tutorial };
-
     return createRoot(element).render(
         (
             <React.StrictMode>
-                <Provider router={ router }/>
+                <Provider router={ Blog }/>
+                <Provider router={ Tutorial }/>
             </React.StrictMode>
         )
     );

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { Reader } from "./reader";
 import { Exports } from "./exports";
 import { Compilation } from "./compilation";
@@ -7,6 +9,12 @@ import { Constants } from "./constants";
 import Utility from "util";
 
 export async function Spline() {
+    const Source = (process.argv.includes("--source")) ? process.argv[process.argv.indexOf("--source") + 1] : null
+
+    if (Source === null) {
+        throw new Error("Must Specify \"--source [argument]\" Directory");
+    }
+
     const { CWD, Path, System, FS } = await Exports.modules();
 
     const router: Array<{ [ $: string ]: { title: string, sidebar: string, route: string, import: string } }> = Array();
@@ -31,14 +39,14 @@ export async function Spline() {
     }
 
     async function Scan() {
-        for await ( const target of await Reader.scan(Path.join(process.cwd(), Constants.Source)) ) {
+        for await ( const target of await Reader.scan(Path.join(process.cwd(), Source!)) ) {
             const route = Object.create({});
             if ( target.properties.file ) {
                 const { path } = target;
 
                 const compilation = await Compilation.mdx(path);
 
-                const key = compilation?.configuration?.route?.replace(Constants.Source + "/", "");
+                const key = compilation?.configuration?.route?.replace(Source! + "/", "");
 
                 if ( typeof key === "string" && compilation && "configuration" in compilation ) {
                     route[ key ] = compilation.configuration;
